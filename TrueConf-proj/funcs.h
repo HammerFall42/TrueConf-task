@@ -18,6 +18,6 @@ using namespace std;
 void fillRandomly(vector <int>& vec, map <int, int>& mp);
 void deleteRandomly(vector <int>& vec, map <int, int>& mp);
 void syncContainers(vector <int>& vec, map <int, int>& mp);
-void printAll(vector <int>& vec, map <int, int>& mp);
+void printAll(const vector <int>& vec, const map <int, int>& mp);
 
 #endif // FUNCS_H

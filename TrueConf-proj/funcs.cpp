@@ -33,46 +33,28 @@ void syncContainers(vector <int>& vec, map <int, int>& mp)
     fill(mp_num_flag.begin(), mp_num_flag.end(), false);
 
     for (auto it = vec.begin(); it != vec.end(); ++it)
-    {
         vec_num_flag[(*it) - GEN_LOWER] = true;
-    }
 
     for (auto it = mp.begin(); it != mp.end(); ++it)
-    {
         mp_num_flag[it->second - GEN_LOWER] = true;
-    }
 
     for (size_t i = 0; i < GEN_UPPER - GEN_LOWER + 1; ++i)
-    {
         vec_num_flag[i] = vec_num_flag[i] && mp_num_flag[i];
-    }
 
     for (auto it = vec.begin(); it != vec.end();)
-    {
         if (!vec_num_flag[(*it) - GEN_LOWER])
-        {
             it = vec.erase(it);
-        }
         else
-        {
             ++it;
-        }
-    }
 
     for (auto it = mp.begin(); it != mp.end();)
-    {
         if (!vec_num_flag[it->second - GEN_LOWER])
-        {
             it = mp.erase(it);
-        }
         else
-        {
             ++it;
-        }
-    }
 }
 
-void printAll(vector <int>& vec, map <int, int>& mp)
+void printAll(const vector <int>& vec, const map <int, int>& mp)
 {
     cout << "Vector: \t";
     for (auto it = vec.begin(); it != vec.end(); ++it)
