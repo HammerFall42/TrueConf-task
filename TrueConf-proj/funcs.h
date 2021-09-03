@@ -7,7 +7,7 @@
 #include <random>
 #include <chrono>
 
-#define SIZE 100
+#define SIZE 20
 #define GEN_LOWER 1
 #define GEN_UPPER 9
 #define DEL_LOWER 0
