@@ -36,6 +36,7 @@ void syncContainers(vector <int>& vec, map <int, int>& mp)
     {
         vec_num_flag[(*it) - GEN_LOWER] = true;
     }
+
     for (auto it = mp.begin(); it != mp.end(); ++it)
     {
         mp_num_flag[it->second - GEN_LOWER] = true;
@@ -69,4 +70,15 @@ void syncContainers(vector <int>& vec, map <int, int>& mp)
             ++it;
         }
     }
+}
+
+void printAll(vector <int>& vec, map <int, int>& mp)
+{
+    cout << "Vector: \t";
+    for (auto it = vec.begin(); it != vec.end(); ++it)
+        cout << (*it) << " ";
+    cout << endl << "Map: \t\t";
+    for (auto it = mp.begin(); it != mp.end(); ++it)
+        cout << it->second << " ";
+    cout << endl << endl;
 }
